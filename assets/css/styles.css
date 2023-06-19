@@ -27,12 +27,8 @@ input, button, textarea, select {
     font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h2 {
     overflow-wrap: break-word;
-}
-
-#root, #__next {
-    isolation: isolate;
 }
 
 .card {
@@ -41,21 +37,33 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     padding: 1.5rem;
     border-radius: 1.5rem;
+    width: 60%;
+    height: 67vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-img {
-    width: 60%;
-    height: 60%;
     align-self: center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
     color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 p {
     color:hsl(215, 51%, 70%);
     font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.eth-desc {
+    margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 .icon {
@@ -74,20 +82,43 @@ p {
 
 .time-label {
     color: hsl(215, 51%, 70%);
+    font-weight: 400;
+}
+
+.divider { 
+    background-color: hsl(215, 32%, 27%); 
+    height: 1px; 
+    border: 0;
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.val-time {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem
 }
 
 .created-by {
     display: flex;
+    align-items: center;
 }
 
 .avatar {
     display:inline;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid white;
+    border-radius: 100%;
+    margin-right: 1rem;
 }
 
-.attribution { font-size: 11px; text-align: center; position: absolute; bottom: 0; left:0}
-.attribution a { color: hsl(228, 45%, 44%); }
+.name {
+    color: white;
+}
+
+.attribution { font-size: 11px; color: white; text-align: center; position: absolute; bottom: 0; left:0}
+.attribution a { color: hsl(231, 30%, 95%); }
 
 /* outfit-300 - latin */
 @font-face {
@@ -113,3 +144,12 @@ p {
     font-weight: 600;
     src: url('../../fonts/outfit-v11-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+/****************************************************/
+/* MOBILE STYLING */
+/****************************************************/
+@media (min-width: 20rem) and (max-width: 30rem) {
+    .card {
+        width: 90vw
+    }
+}
